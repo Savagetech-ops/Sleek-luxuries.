@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S.L.E.E.K – Style Meets Luxury</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #111, #000);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .glow-text {
+      font-size: 4rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
+                   0 0 20px rgba(255, 215, 0, 0.4),
+                   0 0 40px rgba(255, 215, 0, 0.3),
+                   0 0 80px rgba(255, 215, 0, 0.2);
+      animation: flicker 4s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
+                     0 0 20px rgba(255, 215, 0, 0.4),
+                     0 0 40px rgba(255, 215, 0, 0.3);
+      }
+      50% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 215, 0, 0.5),
+                     0 0 60px rgba(255, 215, 0, 0.4);
+      }
+    }
+
+    .subtext {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ddd;
+      animation: slideFadeIn 2s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideFadeIn {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .lux-box {
+      margin-top: 60px;
+      width: 90%;
+      max-width: 1000px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      transition: 0.3s ease;
+    }
+
+    .lux-box:hover {
+      border-color: rgba(255, 215, 0, 0.3);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+    }
+
+    .lux-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .glow-text {
+        font-size: 2.5rem;
+      }
+
+      .subtext {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="glow-text">S.L.E.E.K</h1>
+    <p class="subtext">Style Meets Luxury</p>
+    <div class="lux-box">
+      <p class="lux-text">
+        Welcome to a new dimension of fashion. At <strong>S.L.E.E.K</strong>, we blend timeless elegance with futuristic design. Each piece embodies luxury, each moment reflects boldness. Dive into the world of style redefined.
+      </p>
+    </div>
+  </header>
+</body>
+</html>
